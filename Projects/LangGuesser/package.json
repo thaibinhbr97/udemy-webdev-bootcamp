@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "colors": "^1.4.0",
+    "franc": "^6.0.0",
+    "langs": "^2.0.0"
+  },
+  "name": "languesser",
+  "version": "1.0.0",
+  "exports": "./index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brad Nguyen",
+  "license": "ISC",
+  "description": "",
+  "type": "module",
+  "node": ">=14.16"
+}
