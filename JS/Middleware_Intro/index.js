@@ -3,7 +3,20 @@ const morgan = require('morgan');
 
 const app = express();
 
-app.use(morgan('dev'));
+app.use(morgan('common'));
+
+app.use((req, res, next) => {
+    console.log("FIRST MIDDLEWARE");
+    return next();
+})
+app.use((req, res, next) => {
+    console.log("SECOND MIDDLEWARE");
+    return next();
+})
+app.use((req, res, next) => {
+    console.log("THIRD MIDDLEWARE");
+    return next();
+})
 
 app.get('/', (req, res) => {
     res.send('HOME PAGE!');
