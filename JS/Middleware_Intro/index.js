@@ -3,22 +3,29 @@ const morgan = require('morgan');
 
 const app = express();
 
-app.use(morgan('common'));
+app.use(morgan('dev'));
 
 app.use((req, res, next) => {
-    console.log("FIRST MIDDLEWARE");
-    return next();
+    req.requestTime = Date.now();
+    console.log(req.method, req.path);
+    next();
 })
-app.use((req, res, next) => {
-    console.log("SECOND MIDDLEWARE");
-    return next();
-})
-app.use((req, res, next) => {
-    console.log("THIRD MIDDLEWARE");
-    return next();
-})
+
+// app.use((req, res, next) => {
+//     console.log("FIRST MIDDLEWARE");
+//     return next();
+// })
+// app.use((req, res, next) => {
+//     console.log("SECOND MIDDLEWARE");
+//     return next();
+// })
+// app.use((req, res, next) => {
+//     console.log("THIRD MIDDLEWARE");
+//     return next();
+// })
 
 app.get('/', (req, res) => {
+    console.log(`REQUEST DATE: ${req.requestTime}`);
     res.send('HOME PAGE!');
 })
 
