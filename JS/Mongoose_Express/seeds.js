@@ -12,7 +12,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/farmStand')
 
 // const p = new Product({
 //     name: 'Ruby Grapefruit',
-//     price: 1.99,
+//     price: 1.99, 
 //     category: 'fruit'
 // })
 // p.save()
