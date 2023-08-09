@@ -83,7 +83,7 @@ app.delete('/products/:id', wrapAsync(async (req, res) => {
 
 const handleValidationErr = err => {
     console.dir(err);
-    return new AppError(err.message, 400);
+    return new AppError(`Validation Failed: ${err.message}`, 400);
 }
 
 app.use((err, req, res, next) => {
