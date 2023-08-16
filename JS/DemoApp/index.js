@@ -39,6 +39,11 @@ app.get('/farms/:id', async (req, res) => {
     res.render('farms/show', { farm })
 })
 
+app.delete('/farms/:id', async (req, res) => {
+    const farm = await Farm.findByIdAndDelete(req.params.id);
+    res.redirect('/farms');
+})
+
 app.post('/farms', async (req, res) => {
     const farm = new Farm(req.body);
     await farm.save();
@@ -97,10 +102,10 @@ app.post('/products', wrapAsync(async (req, res, next) => {
 app.get('/products/:id', wrapAsync(async (req, res, next) => {
     const { id } = req.params;
     const product = await Product.findById(id).populate('farm', 'name');
-    console.log(product);
     if (!product) {
         throw next(new AppError('Product Not Found', 404));
     }
+    console.log(product);
     res.render('products/show', { product })
 }));
 
