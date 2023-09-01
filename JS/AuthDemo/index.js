@@ -39,6 +39,22 @@ app.post('/register', async (req, res) => {
     res.redirect('/')
 })
 
+app.get('/login', (req, res) => {
+    res.render('login')
+})
+
+app.post('/login', async (req, res) => {
+    // res.send(req.body);
+    const { username, password } = req.body;
+    const user = await User.findOne({ username });
+    const validPassword = await bcrypt.compare(password, user.password);
+    if (validPassword) {
+        res.send('YAY WELCOME!')
+    } else {
+        res.send('Your username or password are not correct');
+    }
+})
+
 app.get('/secret', (req, res) => {
     res.send('THIS IS SECRET! YOU CANNOT SEE ME UNLESS YOU LOGGED IN!!!')
 })
