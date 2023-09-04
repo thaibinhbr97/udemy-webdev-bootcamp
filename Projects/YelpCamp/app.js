@@ -7,6 +7,7 @@ const flash = require('connect-flash');
 const Joi = require('joi');
 const methodOverride = require('method-override');
 
+
 const campgrounds = require('./routes/campground.js');
 const reviews = require('./routes/review.js');
 
