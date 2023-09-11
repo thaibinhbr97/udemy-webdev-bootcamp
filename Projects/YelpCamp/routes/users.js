@@ -12,9 +12,8 @@ router.route('/register')
     .post(catchAsync(users.register))
 
 router.route('/login')
-    .get('/login', users.renderLogin)
-    .post('/login',
-        // use the storeReturnTo middleware to save the returnTo value from session to res.locals
+    .get(users.renderLogin)
+    .post(// use the storeReturnTo middleware to save the returnTo value from session to res.locals
         storeReturnTo,
         // passport.authenticate logs the user in and clears req.session
         passport.authenticate('local', { failureFlash: true, failureRedirect: '/login' }),
