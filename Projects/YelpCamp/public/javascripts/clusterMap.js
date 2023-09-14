@@ -7,6 +7,10 @@ const map = new mapboxgl.Map({
     zoom: 3
 });
 
+// Add zoom and rotation controls to the map.
+const mapControl = new mapboxgl.NavigationControl();
+map.addControl(mapControl, 'bottom-right');
+
 console.log(campgrounds);
 
 map.on('load', () => {
