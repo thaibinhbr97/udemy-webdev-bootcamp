@@ -1,7 +1,6 @@
-// if (process.env.NODE_ENV !== 'production') {
-//     require('dotenv').config();
-// }
-require('dotenv').config();
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config();
+}
 
 const express = require('express');
 const path = require('path');
@@ -15,14 +14,15 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local');
 const User = require('./models/user');
 const helmet = require('helmet');
-
 const mongoSanitize = require('express-mongo-sanitize');
 
 const userRoutes = require('./routes/users')
 const campgroundRoutes = require('./routes/campground.js');
 const reviewRoutes = require('./routes/review.js');
 
-mongoose.connect('mongodb://localhost:27017/yelp-camp')
+// const dbUrl = process.env.DB_URL;
+const localDatabase = 'mongodb://localhost:27017/yelp-camp';
+mongoose.connect(localDatabase);
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
