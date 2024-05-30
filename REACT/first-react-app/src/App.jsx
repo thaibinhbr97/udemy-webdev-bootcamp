@@ -1,4 +1,5 @@
 import './App.css'
+import ColorList from './ColorList'
 import Die from './Die'
 import DoubleDice from './DoubleDice'
 import Greeter from './Greeter'
@@ -8,6 +9,8 @@ import ObjectPicker from './ObjectPicker'
 
 function App() {
   return <div>
+    <ColorList colors={["red", "teal", "blue", "pink"]} />
+    <ColorList colors={["olive", "orangered", "slaygrey", "black"]} />
     <Heading color="magenta" text="Welcome!" fontSize="48px" />
     <DoubleDice />
     <Heading color="blue" text="blah" fontSize="40px" />
