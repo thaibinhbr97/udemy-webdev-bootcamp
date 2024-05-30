@@ -1,12 +1,16 @@
 function handleClick() {
-    console.log("CLICKED THE BUTTON!")
+    console.log("CLICKED THE BUTTON!");
+}
+
+function handleHover() {
+    console.log("HOVERED!!!");
 }
 
 export default function Click() {
     return (
         <div>
-            <p>Click The Button</p>
+            <p onMouseOver={handleHover}>Hover over me</p>
             <button onClick={handleClick}>Click</button>
         </div>
-    )
+    );
 }
