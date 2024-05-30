@@ -6,9 +6,12 @@ import Greeter from './Greeter'
 import Heading from './Heading'
 import ListPicker from './ListPicker'
 import ObjectPicker from './ObjectPicker'
+import Slot from './Slot'
 
 function App() {
   return <div>
+    <Slot valList={["🍒", "🍒", "🍒"]} />
+    <Slot valList={["🍒", "🍌", "🍒"]} />
     <ColorList colors={["red", "teal", "blue", "pink"]} />
     <ColorList colors={["olive", "orangered", "slaygrey", "black"]} />
     <Heading color="magenta" text="Welcome!" fontSize="48px" />
