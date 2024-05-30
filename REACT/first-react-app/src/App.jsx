@@ -7,8 +7,9 @@ import './App.css';
 // import ListPicker from './ListPicker'
 // import ObjectPicker from './ObjectPicker'
 // import Slot from './Slot'
-import Click from './Click';
-import Form from './Form';
+// import Click from './Click';
+// import Form from './Form';
+import Clicker from './Clicker';
 
 // import ShoppingList from './ShoppingList';
 // const data = [
@@ -31,8 +32,10 @@ import Form from './Form';
 
 function App() {
   return <div>
-    <Form />
-    <Click />
+    <Clicker message="Hi!" buttonText="Please Click Me <3" />
+    <Clicker message="Please Stop Clicking Me!" buttonText="do not click" />
+    {/* <Form />
+    <Click /> */}
     {/* <PropertyList properties={properties} /> */}
     {/* <ShoppingList items={data} /> */}
     {/* <Slot valList={["🍒", "🍒", "🍒"]} />
