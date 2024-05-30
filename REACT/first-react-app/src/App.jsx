@@ -8,6 +8,7 @@ import './App.css';
 // import ObjectPicker from './ObjectPicker'
 // import Slot from './Slot'
 import Click from './Click';
+import Form from './Form';
 
 // import ShoppingList from './ShoppingList';
 // const data = [
@@ -30,6 +31,7 @@ import Click from './Click';
 
 function App() {
   return <div>
+    <Form />
     <Click />
     {/* <PropertyList properties={properties} /> */}
     {/* <ShoppingList items={data} /> */}
