@@ -1,6 +1,10 @@
+import { useState } from 'react';
+
 export default function Counter() {
-    const incrementNum = () => num++;
-    let num = 0;
+    const [num, setNum] = useState(5);
+    const incrementNum = () => {
+        setNum(num + 1);
+    };
     return (
         <div>
             <p>The count is: {num}</p>
