@@ -1,0 +1,4 @@
+.Toggler p:nth-child(2) {
+    font-size: 5rem;
+    cursor: pointer;
+}

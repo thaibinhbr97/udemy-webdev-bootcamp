@@ -1,4 +1,5 @@
 import './App.css';
+import Toggler from './Toggler';
 // import ColorList from './ColorList'
 // import Die from './Die'
 // import DoubleDice from './DoubleDice'
@@ -10,7 +11,7 @@ import './App.css';
 // import Click from './Click';
 // import Form from './Form';
 // import Clicker from './Clicker';
-import Counter from './Counter';
+// import Counter from './Counter';
 
 // import ShoppingList from './ShoppingList';
 // const data = [
@@ -33,7 +34,8 @@ import Counter from './Counter';
 
 function App() {
   return <div>
-    <Counter />
+    <Toggler />
+    {/* <Counter /> */}
     {/* <Clicker message="Hi!" buttonText="Please Click Me <3" />
     <Clicker message="Please Stop Clicking Me!" buttonText="do not click" /> */}
     {/* <Form />
