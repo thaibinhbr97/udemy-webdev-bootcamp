@@ -1,5 +1,6 @@
 import './App.css';
-import Toggler from './Toggler';
+import TogglerCounter from './TogglerCounter';
+// import Toggler from './Toggler';
 // import ColorList from './ColorList'
 // import Die from './Die'
 // import DoubleDice from './DoubleDice'
@@ -34,7 +35,8 @@ import Toggler from './Toggler';
 
 function App() {
   return <div>
-    <Toggler />
+    <TogglerCounter />
+    {/* <Toggler /> */}
     {/* <Counter /> */}
     {/* <Clicker message="Hi!" buttonText="Please Click Me <3" />
     <Clicker message="Please Stop Clicking Me!" buttonText="do not click" /> */}
