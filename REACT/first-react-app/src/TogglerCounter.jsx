@@ -16,7 +16,7 @@ export default function TogglerCounter() {
             </button>
             <br />
             <p># of Likes: {like}</p>
-            <button onClick={incrementLike}>Like</button>
+            <button onClick={incrementLike}>Increment</button>
         </div>
     );
 }
