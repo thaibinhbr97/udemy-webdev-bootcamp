@@ -1,0 +1,13 @@
+import { useState } from 'react';
+
+function generateBoard() {
+    console.log("MAKING THE INITIAL GAME BOARD");
+    return Array(5000);
+}
+
+export default function Dumbo() {
+    const [board, setBoard] = useState(generateBoard);
+    return (
+        <button onClick={() => setBoard("hello")}>Click me to change state</button>
+    )
+}
