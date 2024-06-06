@@ -1,4 +1,6 @@
-import './App.css'
+import './App.css';
+import Dice from './Dice';
+import './Dice.css';
 
 // requirements
 // a set components for:
@@ -13,7 +15,11 @@ import './App.css'
 
 
 function App() {
-
+  return (<>
+    <Dice dice={[3, 6, 1]} />
+    <Dice dice={[1, 2, 3]} color="red" />
+    <Dice dice={[2, 4, 5]} color="green" />
+  </>);
 }
 
 export default App
