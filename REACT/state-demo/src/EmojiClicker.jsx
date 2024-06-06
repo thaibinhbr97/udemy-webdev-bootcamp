@@ -23,8 +23,24 @@ export default function EmojiClicker() {
             return prevEmojis.filter(e => e.id !== id);
         })
     }
+    const makeAllHearts = () => {
+        // JS way
+        // const heartEmojis = emojis.map((item) => {
+        //     return {
+        //         ...item,
+        //         emoji: '❤️'
+        //     }
+        // })
+        // setEmojis(heartEmojis);
+
+        // REACT way
+        setEmojis(prevEmojis => {
+            return prevEmojis.map((item) => { return { ...item, emoji: '❤️' } })
+        })
+    }
     return (<div>
         {emojis.map(e => <span onClick={() => deleteEmoji(e.id)} key={e.id} style={{ fontSize: "4rem" }}>{e.emoji}</span>)}
         <button onClick={addEmoji}>Add Emoji</button>
+        <button onClick={makeAllHearts}>Make them all hearts</button>
     </div>);
 }
