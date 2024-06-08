@@ -13,4 +13,14 @@ function sum(nums) {
     return nums.reduce((prev, cur) => prev + cur, 0);
 }
 
-export { d6, getRolls, sum };
+// Boolean function checking if a total dice < 4
+function lessThan4(dice) {
+    return sum(dice) < 4;
+}
+
+function allSameValue(dice) {
+    return dice.every((v) => v === dice[0]);
+}
+
+export { allSameValue, d6, getRolls, lessThan4, sum };
+
