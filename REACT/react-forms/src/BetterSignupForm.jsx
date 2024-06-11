@@ -7,8 +7,12 @@ export default function BetterSignupForm() {
         const changedField = evt.target.name;
         const newValue = evt.target.value;
         setFormData(curData => {
-            curData[changedField] = newValue;
-            return { ...curData };
+            // JS way
+            // curData[changedField] = newValue;
+            // return { ...curData };
+
+            // React way
+            return { ...curData, [changedField]: newValue };
         })
     }
 
