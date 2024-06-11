@@ -14,7 +14,7 @@ export default function ShoppingListForm({ addItem }) {
         // Second way
         setFormData(curData => {
             return { ...curData, [evt.target.name]: evt.target.value };
-        })
+        });
     }
 
     const handleSubmit = (evt) => {

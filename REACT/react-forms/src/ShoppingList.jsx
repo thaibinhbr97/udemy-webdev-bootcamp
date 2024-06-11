@@ -7,9 +7,7 @@ export default function ShoppingList() {
         { id: 2, product: "Eggs", quantity: 12 },
     ]);
     const addItem = (item) => {
-        setItems(curItems => {
-            return [...curItems, { ...item, id: 10 }];
-        })
+        setItems(curItems => [...curItems, { ...item, id: 10 }]);
     }
     return (
         <div>
