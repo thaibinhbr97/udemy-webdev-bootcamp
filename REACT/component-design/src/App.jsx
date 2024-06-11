@@ -1,7 +1,7 @@
 import './App.css';
 import './Dice.css';
-import LuckyN from './LuckyN';
-import { allSameValue, lessThan4 } from './utils';
+// import LuckyN from './LuckyN';
+import BoxGrid from './BoxGrid';
 
 // requirements
 // a set components for:
@@ -18,8 +18,9 @@ import { allSameValue, lessThan4 } from './utils';
 function App() {
   return (
     <>
-      <LuckyN title='Roll less than 4' winCheck={lessThan4} />
-      <LuckyN title='Roll the same number' winCheck={allSameValue} />
+      <BoxGrid />
+      {/* <LuckyN title='Roll less than 4' winCheck={lessThan4} />
+      <LuckyN title='Roll the same number' winCheck={allSameValue} /> */}
     </>
   );
 }
