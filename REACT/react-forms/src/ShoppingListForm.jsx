@@ -20,14 +20,13 @@ export default function ShoppingListForm({ addItem }) {
     const handleSubmit = (evt) => {
         evt.preventDefault();
         addItem(formData);
+        setFormData({ product: "", quantity: 0 });
     }
 
     return (
         <form onSubmit={handleSubmit}>
-            <h3>Product: {formData.product}</h3>
             <label htmlFor="product">Product Name</label>
             <input type="text" placeholder="product name" name="product" id="product" onChange={handleChange} value={formData.product} />
-            <h3>Quantity: {formData.quantity}</h3>
             <label htmlFor="quantity">Quantity</label>
             <input type="number" placeholder="1" name="quantity" id="quantity" onChange={handleChange} value={formData.quantity} />
             <button>Add Item</button>
