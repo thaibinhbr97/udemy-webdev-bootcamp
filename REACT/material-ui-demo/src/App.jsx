@@ -2,7 +2,8 @@
 // import Button from '@mui/material/Button';
 // import IconButton from '@mui/material/IconButton';
 import './App.css';
-import RatingDemo from './RatingDemo';
+import FormDemo from './FormDemo';
+// import RatingDemo from './RatingDemo';
 
 function App() {
 
@@ -15,7 +16,9 @@ function App() {
       <IconButton color="secondary" aria-label="add an alarm">
         <AlarmIcon />
       </IconButton> */}
-      <RatingDemo />
+      {/* <RatingDemo /> */}
+      <FormDemo />
+
     </>
   )
 }
