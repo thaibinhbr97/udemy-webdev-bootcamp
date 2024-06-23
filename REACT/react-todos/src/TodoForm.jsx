@@ -1,4 +1,4 @@
-import { Create } from '@mui/icons-material';
+import AddCircleIcon from '@mui/icons-material/AddCircle';
 import { IconButton, InputAdornment } from '@mui/material';
 import ListItem from '@mui/material/ListItem';
 import TextField from '@mui/material/TextField';
@@ -19,12 +19,12 @@ export default function TodoForm({ add }) {
     return (
         <ListItem>
             <form onSubmit={handleSubmit}>
-                <TextField id="outlined-basic" label="Outlined" variant="outlined" onChange={handleChange} value={text}
+                <TextField id="outlined-basic" label="New Todo" variant="outlined" onChange={handleChange} value={text}
                     InputProps={{
                         endAdornment: (
                             <InputAdornment position="end">
                                 <IconButton aria-label="create todo" edge="end" type="submit">
-                                    <Create />
+                                    <AddCircleIcon />
                                 </IconButton>
                             </InputAdornment>
                         ),

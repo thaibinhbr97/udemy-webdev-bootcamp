@@ -1,4 +1,4 @@
-import CommentIcon from '@mui/icons-material/Comment';
+import ClearIcon from '@mui/icons-material/Clear';
 import Checkbox from '@mui/material/Checkbox';
 import IconButton from '@mui/material/IconButton';
 import ListItem from '@mui/material/ListItem';
@@ -15,7 +15,7 @@ export default function TodoItem({ todo, remove, toggle }) {
         <ListItem
             secondaryAction={
                 <IconButton edge="end" aria-label="comments" onClick={removeTodo}>
-                    <CommentIcon />
+                    <ClearIcon />
                 </IconButton>
             }
             disablePadding
