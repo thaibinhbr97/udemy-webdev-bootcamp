@@ -1,4 +1,6 @@
+import { Box } from '@mui/material';
 import List from '@mui/material/List';
+import Typography from '@mui/material/Typography';
 import TodoForm from "./TodoForm";
 import TodoItem from './TodoItem';
 
@@ -41,11 +43,18 @@ export default function TodoList() {
     };
 
     return (
-        <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-            {todos.map((todo) => (
-                <TodoItem todo={todo} key={todo.id} remove={removeTodo} toggle={() => toggleTodo(todo.id)} />
-            ))}
-            <TodoForm add={addTodo} />
-        </List >
+        <Box sx={{
+            display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', m: 3
+        }}>
+            <Typography variant="h2" component="h1" sx={{ flexGrow: 1 }}>
+                Todos
+            </Typography>
+            <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+                {todos.map((todo) => (
+                    <TodoItem todo={todo} key={todo.id} remove={removeTodo} toggle={() => toggleTodo(todo.id)} />
+                ))}
+                <TodoForm add={addTodo} />
+            </List >
+        </Box>
     )
 }

@@ -1,5 +1,6 @@
 import CssBaseline from "@mui/material/CssBaseline"
 import './App.css'
+import NavBar from "./NavBar"
 import TodoList from "./TodoList"
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
   return (
     <>
       <CssBaseline />
-      <h1>Todos</h1>
+      <NavBar />
       <TodoList />
     </>
   )
