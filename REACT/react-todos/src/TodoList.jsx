@@ -21,7 +21,7 @@ export default function TodoList() {
     return (
         <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
             {todos.map((todo) => (
-                <TodoItem todo={todo} key={todo.id} removeTodo={() => removeTodo(todo.id)} />
+                <TodoItem todo={todo} key={todo.id} remove={removeTodo} />
             ))}
         </List >
     )

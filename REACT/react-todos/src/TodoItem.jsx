@@ -6,9 +6,11 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 
-export default function TodoItem({ todo, removeTodo }) {
+export default function TodoItem({ todo, remove }) {
     const labelId = `checkbox-list-label-${todo.id}`;
-
+    const removeTodo = () => {
+        remove(todo.id);
+    }
     return (
         <ListItem
             secondaryAction={
