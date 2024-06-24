@@ -21,25 +21,15 @@ export default function TodoList() {
     }, [todos]);
 
     const removeTodo = (id) => {
-        setTodos((prevTodos) => {
-            return prevTodos.filter((t) => t.id !== id);
-        })
-    }
+        setTodos(prevTodos => prevTodos.filter((t) => t.id !== id));
+    };
     const toggleTodo = (id) => {
         setTodos((prevTodos) => {
-            return prevTodos.map((todo) => {
-                if (todo.id === id) {
-                    return { ...todo, completed: !todo.completed };
-                } else {
-                    return todo;
-                }
-            })
+            return prevTodos.map(todo => todo.id === id ? { ...todo, completed: !todo.completed } : todo);
         })
     };
     const addTodo = (text) => {
-        setTodos(prevTodos => {
-            return [...prevTodos, { id: crypto.randomUUID(), text: text, completed: false }];
-        })
+        setTodos(prevTodos => [...prevTodos, { id: crypto.randomUUID(), text: text, completed: false }]);
     };
 
     return (
